@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Plix</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand ms-5" href="index.html">PLIX</a>
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="popular.html">Popular Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="drama.html">Best Drama</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="theater.html">Available in
+                                Theathers</a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="" id="form" class="d-flex">
+                    <input type="text" id="search" class="search me-2" placeholder="Search">
+                </form>
+            </div>
+
+        </nav>
+    </header>
+    <div class="m-5 fontwhite">
+        <h2>Watch in theaters</h2>
+    </div>
+    <main id="mainTheater" class="container-fluid justify-content-center"></main>
+
+    <footer>
+        <a href="about.html">About Plix</a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'></script>
+
+</body>
+
+</html>
