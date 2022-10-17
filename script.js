@@ -58,6 +58,10 @@ form.addEventListener("submit", (e) => {
 
   const searchTerm = search.value;
 
+  function searchResult() {
+    documment.getElementById("subtitle").innerHTML = "Search Results";
+  }
+
   if (searchTerm && searchTerm !== "") {
     getresults(SEARCH_API + searchTerm);
     getTheater(SEARCH_API + searchTerm);
@@ -65,14 +69,11 @@ form.addEventListener("submit", (e) => {
     getPopulars(SEARCH_API + searchTerm);
 
     search.value = "";
+    searchResult();
   } else {
     window.location.reload();
   }
 });
-
-// const home = document.getElementById("home");
-
-// home.addEventListener("load", myFunc());  balikan mo mamaya
 
 /*-----------------------------------THEATHER--------------------------------------*/
 const THEATER_URL =
