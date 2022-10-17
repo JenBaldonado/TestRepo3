@@ -7,102 +7,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
-<style>
+    <style>
+        :root {
+            --primary-color: #1d2228;
+            --secondary-color: #fb8122;
+        }
 
-:root {
-  --primary-color: #1d2228;
-  --secondary-color: #fb8122;
-}
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin:50px ;
-    background: linear-gradient(grey,orange,grey);
-    text-align: justify;
-  }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 50px;
+            background: linear-gradient(grey, orange, grey);
+            text-align: justify;
+        }
 
-    h1, h3{
-        text-align: center;
-    }
+        h1,
+        h3 {
+            text-align: center;
+        }
 
-    img {
-        object-fit: cover;
-        width:300px;height:300px;
-    }
+        img {
+            object-fit: cover;
+            width: 300px;
+            height: 300px;
+        }
 
-    .card-container {
-        display: flex;
-        gap: 50px;
-        margin: 50px auto;
-        
-    }
-  
-  .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  .flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
-  }
+        .card-container {
+            display: flex;
+            gap: 50px;
+            margin: 50px auto;
 
-  button {
-  background-color:var(--primary-color);
-  border: 2px solid var(--secondary-color);
-  border-radius: 50px;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #fff;
-  
-  }
-</style>
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            border: 2px solid var(--secondary-color);
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            color: #fff;
+
+        }
+    </style>
 
 
 </head>
 
-<body>
-
-</body>
-
-</html>
-<style>
-
-</style>
-</head>
 
 <body>
-   
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top px-2">
+            <div class="container-fluid">
+                <a class="navbar-brand  active" aria-current="page" href="index.html">PLIX</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="popular.html">Popular Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="drama.html">Best Drama</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="theater.html">Available in Theathers</a>
+                        </li>
+                    </ul>
+                    <form action="" id="form" class="d-flex">
+                        <input type="text" id="search" class="search me-2" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <h1>The Team Who Made This Possible</h1>
     <h3>Get to know them</h3>
 
@@ -111,7 +133,7 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="../assets/abner.jpg" alt="Abner">
+                    <img src="assets/abner.jpg" alt="Abner">
                 </div>
                 <div class="flip-card-back">
                     <h1>Abner Nercua</h1>
@@ -125,7 +147,7 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="../assets/cyan.jpg" alt="Cyan">
+                    <img src="assets/cyan.jpg" alt="Cyan">
                 </div>
                 <div class="flip-card-back">
                     <h1>Cyan Milliam Ranil</h1>
@@ -139,7 +161,7 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="../assets/jenifer.jpg" alt="Jenifer">
+                    <img src="assets/jenifer.jpg" alt="Jenifer">
                 </div>
                 <div class="flip-card-back">
                     <h1>Jenifer Baldonado</h1>
@@ -153,7 +175,7 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="../assets/daisy.jpg" alt="Daisy">
+                    <img src="assets/daisy.jpg" alt="Daisy">
                 </div>
                 <div class="flip-card-back">
                     <h1>Daisy Pasobillo</h1>
@@ -165,9 +187,15 @@
         </div>
 
     </div>
-<h2>About this site</h2>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ut, est iste, reprehenderit similique incidunt explicabo, tenetur sint tempora dicta quis debitis veniam nisi fugiat. Perspiciatis quas natus quasi laborum ipsa dolore obcaecati perferendis culpa cumque, porro placeat excepturi aspernatur! Explicabo deserunt aperiam sit veniam ut officiis reprehenderit sapiente, iure, est modi asperiores perspiciatis iste blanditiis? Odit quas ipsa fuga quam laudantium expedita hic non autem qui. Ullam qui maiores dolores, voluptatum dignissimos voluptas eaque! Dolorem, aliquam mollitia voluptates nihil similique porro ad nostrum tempore animi fugiat non saepe. Id quasi, veniam itaque beatae voluptatem amet asperiores. Voluptatum, deleniti numquam.</p>
-<button type="button">Go to Home</button>
+    <h2>About this site</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores ut, est iste, reprehenderit similique incidunt
+        explicabo, tenetur sint tempora dicta quis debitis veniam nisi fugiat. Perspiciatis quas natus quasi laborum
+        ipsa dolore obcaecati perferendis culpa cumque, porro placeat excepturi aspernatur! Explicabo deserunt aperiam
+        sit veniam ut officiis reprehenderit sapiente, iure, est modi asperiores perspiciatis iste blanditiis? Odit quas
+        ipsa fuga quam laudantium expedita hic non autem qui. Ullam qui maiores dolores, voluptatum dignissimos voluptas
+        eaque! Dolorem, aliquam mollitia voluptates nihil similique porro ad nostrum tempore animi fugiat non saepe. Id
+        quasi, veniam itaque beatae voluptatem amet asperiores. Voluptatum, deleniti numquam.</p>
+    <button type="button">Go to Home</button>
 </body>
 
 </html>
