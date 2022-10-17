@@ -33,7 +33,7 @@ body {
 .fontwhite {
   color: #eee;
   padding-top: 3rem;
-  display: none;
+  /* display: none; */
 }
 
 /*---------------------------------HOME----------------------------------*/
