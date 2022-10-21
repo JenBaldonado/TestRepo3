@@ -1,3 +1,4 @@
+
 const API_URL =
   "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=229d819906342a6a79fb1641a3951859&page=1";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
@@ -57,22 +58,17 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const searchTerm = search.value;
+  const titleChange = document.getElementById('subtitle').innerHTML ="Search Results"
 
   if (searchTerm && searchTerm !== "") {
     getresults(SEARCH_API + searchTerm);
-    getTheater(SEARCH_API + searchTerm);
-    getDrama(SEARCH_API + searchTerm);
-    getPopulars(SEARCH_API + searchTerm);
+  
 
     search.value = "";
   } else {
     window.location.reload();
   }
 });
-
-// const home = document.getElementById("home");
-
-// home.addEventListener("load", myFunc());  balikan mo mamaya
 
 /*-----------------------------------THEATHER--------------------------------------*/
 const THEATER_URL =
@@ -192,3 +188,22 @@ function showresult(results) {
     mainresult.appendChild(resultEl);
   });
 }
+
+/*------------------------------Trailers--------------------------*/
+let nextPageToken ="";
+function getVideos(){
+  fetch ("https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelId=UCi8e0iOVk1fEOogdfu4YgfA&maxResults=8&key=AIzaSyATjKteLjW4PU1CiVjWAqvruMR27Bau29g&pageToken="+nextPageToken).then((result) => {
+  return result.json()
+}).then((data) => {
+  let videos = data.items
+  nextPageToken = data.nextPageToken
+  let videoContainer = document.getElementById('trailer')
+  for (video of videos) {
+    let videoUrl = `https://www.youtube.com/watch?v=${video.id.videoId}`
+    videoContainer.innerHTML += `
+    <img src="${video.snippet.thumbnails.high.url}">`
+  }
+})
+};
+
+getVideos();
