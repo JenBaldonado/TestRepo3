@@ -42,3 +42,32 @@ function showresult(results) {
     mainresult.appendChild(resultEl);
   });
 }
+
+function getClassByRate(vote) {
+  if (vote >= 8) {
+    return "green";
+  } else if (vote >= 5) {
+    return "orange";
+  } else {
+    return "red";
+  }
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const searchTerm = search.value;
+
+  function searchResult() {
+    documment.getElementById("subtitle").innerHTML = "Search Results";
+  }
+
+  if (searchTerm && searchTerm !== "") {
+    getDrama(SEARCH_API + searchTerm);
+
+    search.value = "";
+    searchResult();
+  } else {
+    window.location.reload();
+  }
+});
