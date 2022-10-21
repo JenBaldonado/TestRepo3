@@ -33,14 +33,13 @@ body {
 .fontwhite {
   color: #eee;
   padding-top: 3rem;
-  /* display: none; */
+  height: 3rem;
 }
 
 /*---------------------------------HOME----------------------------------*/
 .trailer {
   width: 50rem;
   overflow: auto;
-  /* height: 70rem; */
 }
 
 .trailer-container {
