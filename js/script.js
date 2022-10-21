@@ -26,7 +26,7 @@ function showresult(results) {
     const { title, poster_path, vote_average, overview } = result;
 
     const resultEl = document.createElement("div");
-    resultEl.classList.add("movie");
+    resultEl.classList.add("trailer-container");
     resultEl.innerHTML = `
       <img src="${IMG_PATH + poster_path}" alt="${title}">
       <div class="movie-info">
