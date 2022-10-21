@@ -60,11 +60,16 @@ form.addEventListener("submit", (e) => {
   const searchTerm = search.value;
   const titleChange = document.getElementById('subtitle').innerHTML ="Search Results"
 
+  function searchResult() {
+    documment.getElementById("subtitle").innerHTML = "Search Results";
+  }
+
   if (searchTerm && searchTerm !== "") {
     getresults(SEARCH_API + searchTerm);
   
 
     search.value = "";
+    searchResult();
   } else {
     window.location.reload();
   }
